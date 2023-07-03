@@ -17,8 +17,8 @@
 3. 输入简单: 支持识别图片题目公式与文字。
 4. 结果判断：基于多模型(gpt3.5,4)联合讨论，我们能够更准确的求解(相比于直接求解)。对于实在无法解决的问题，我们输出了准确率的概率，给学生提供参考。
 
-# 软件截图
-![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/3271fb97-5f40-4f7d-8d2b-54baf6908701)
+# 产品灵感
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/2ab8be8e-561a-4237-9eb9-55fd11b4e322)
 
 # 产品功能:
 1. 多模态输入(Multimodal Input)，用于识别图片题目公式与文字(基于腾讯云OCR)
@@ -27,16 +27,18 @@
 4. 跨平台部署(Cross-platform)，支持Windows，Mac以及Android设备
 5. 题库学习(Bank Learning),直接输入题目或者公式进行学习
 
-
 # 软件部署
 
 1. 网页端: 开发了 [solvegpt](http://118.89.117.111/solvegpt/index.html)
-2. 安卓端: 开发了 Android端App Solvegpt
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/000343c5-5662-4b8a-adb0-3fd8c98fde7f)
+
+2. 安卓端: 开发了 Android端App-Solvegpt(Release now,v1.0.0)
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/93a552f2-0f0d-4d4b-922e-0f38c291bb19)
+
 
 ---
 
-
-# 代码运行
+# 代码运行说明
 请补充OCR Key和OPENAI Key
 
 ```
