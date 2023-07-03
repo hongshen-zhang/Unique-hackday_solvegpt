@@ -1,4 +1,4 @@
-![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/4fb40777-9f97-4aca-9067-3c40cf78c394)# AIGC + Accessible
+# Unique Hackday 2023: AIGC + Accessible
 
 # 背景介绍
 目前，一种主流的观点是:chatgpt能帮我们解决作业问题(90%的国外学生都用chatgpt写作业)。
@@ -10,7 +10,7 @@
 3. 输入复杂: 手动将文字和公式输入chatgpt。
 4. 结果不准：chatgpt目前在解决理科题目时，准确率低。(高考理科填空题和大题准确率不足20%)
 
-因此,我们开发了solvegpt，一款AI实时集智拍照解题工具
+因此,我们开发了[solvegpt](http://118.89.117.111/solvegpt/index.html)，一款AI实时集智拍照解题工具
 
 1. 无网络限制: 部署在腾讯云(使用香港节点中转)。
 2. 无账号限制: 我们目前免费开放使用(我垫钱)。
