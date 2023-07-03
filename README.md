@@ -1,6 +1,8 @@
-![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/8bc232f7-7edd-4b97-ab44-4982407fcebf)# Unique-hackday_solvegpt
+# Unique-hackday_solvegpt
 
 # 软件截图
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/07e774e9-1c41-4daf-9eed-44c4673b5169)
+
 
 # 产品功能:
 1. 多模态输入(Multimodal Input)，用于识别图片题目公式与文字(基于腾讯云OCR)
