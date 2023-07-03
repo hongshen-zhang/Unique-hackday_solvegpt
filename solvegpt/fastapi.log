@@ -1,0 +1,167 @@
+nohup: ignoring input
+INFO:     Started server process [1009634]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     112.25.223.99:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'text': '若正四棱锥 $\\Omega$ 的每个面的面积都是 1 , 则 $\\Omega$ 的体积为 答案应该是\\frac{\\sqrt{15}}{6}', 'model': 'gpt-3.5-turbo'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from database.', 'data': {'question': '若正四棱锥 $\\Omega$ 的每个面的面积都是 1 , 则 $\\Omega$ 的体积为 答案应该是\\frac{\\sqrt{15}}{6}', 'answer': '这道题可以使用向量法来解决。首先，我们可以将正四棱锥 $\\Omega$ 摆放在坐标系中，使得锥心在原点，底面在 $xy$ 平面上，且底面的中心在 $x$ 轴上。设棱长为 $a$，则底面边长为 $a\\sqrt{2}$。连接锥心 $O$ 与底面中心 $M$，则有 $OM=\\frac{a\\sqrt{2}}{2}$。连接 $O$ 与底面的四个顶点 $A_1,A_2,A_3,A_4$，则可以得到四个等腰三角形 $OMA_1,OMA_2,OMA_3,OMA_4$，且这些三角形的面积都是 $\\frac{1}{2}$。因此，我们可以得到以下向量：\r\n\r\n$$\\overrightarrow{OA_1}=\\frac{a\\sqrt{2}}{2}\\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix},\\quad \\overrightarrow{OA_2}=\\frac{a\\sqrt{2}}{2}\\begin{pmatrix} -1 \\\\ 0 \\\\ 0 \\end{pmatrix},\\quad \\overrightarrow{OA_3}=\\frac{a\\sqrt{2}}{2}\\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix},\\quad \\overrightarrow{OA_4}=\\frac{a\\sqrt{2}}{2}\\begin{pmatrix} 0 \\\\ -1 \\\\ 0 \\end{pmatrix}$$\r\n\r\n又因为 $\\Omega$ 是正四棱锥，所以 $\\overrightarrow{OA_1},\\overrightarrow{OA_2},\\overrightarrow{OA_3},\\overrightarrow{OA_4}$ 都是等边向量，且它们的长度都是 $\\frac{a\\sqrt{6}}{2}$。因此，我们可以得到以下向量：\r\n\r\n$$\\overrightarrow{A_1A_2}=-a\\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix},\\quad \\overrightarrow{A_1A_3}=a\\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix},\\quad \\overrightarrow{A_1A_4}=-a\\begin{pmatrix} 0 \\\\ 1 \\\\ -1 \\end{pmatrix}$$\r\n\r\n现在，我们可以使用向量积来计算 $\\overrightarrow{A_1A_2}\\times\\overrightarrow{A_1A_3}$ 和 $\\overrightarrow{A_1A_2}\\times\\overrightarrow{A_1A_4}$，从而得到 $\\Omega$ 的体积：\r\n\r\n$$\\begin{aligned} &\\overrightarrow{A_1A_2}\\times\\overrightarrow{A_1A_3}=-a^2\\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix}\\times\\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix}=-a^2\\begin{pmatrix} -1 \\\\ -1 \\\\ 1 \\end{pmatrix} \\\\ &\\overrightarrow{A_1A_2}\\times\\overrightarrow{A_1A_4}=-a^2\\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix}\\times\\begin{pmatrix} 0 \\\\ 1 \\\\ -1 \\end{pmatrix}=a^2\\begin{pmatrix} -1 \\\\ 1 \\\\ 1 \\end{pmatrix} \\end{aligned}$$\r\n\r\n因此，$\\Omega$ 的体积为：\r\n\r\n$$V=\\frac{1}{3}\\left|\\overrightarrow{A_1A_2}\\times\\overrightarrow{A_1A_3}\\cdot\\overrightarrow{A_1A_4}\\right|=\\frac{a^3}{3}\\cdot\\frac{\\sqrt{15}}{4}=\\frac{\\sqrt{15}}{6}$$\r\n\r\n因此，答案为 $\\frac{\\sqrt{15}}{6}$。', 'accuracy': 100}}}
+INFO:     112.25.223.99:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+Params: {'text': '若正四棱锥 $\\Omega$ 的每个面的面积都是 1 , 则 $\\Omega$ 的体积为', 'model': 'gpt-3.5-turbo'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': '若正四棱锥 $\\Omega$ 的每个面的面积都是 1 , 则 $\\Omega$ 的体积为', 'answer': '设正四棱锥 $\\Omega$ 的底面为正方形，边长为 $a$，则 $\\Omega$ 的高可以表示为 $\\frac{a\\sqrt{2}}{2}$。根据四棱锥的体积公式，$\\Omega$ 的体积为：\n\n$$V = \\frac{1}{3}S_\\text{底面}h = \\frac{1}{3}a^2 \\cdot \\frac{a\\sqrt{2}}{2} = \\frac{a^3\\sqrt{2}}{6}$$\n\n每个面的面积都是 1，因此 $\\Omega$ 的侧棱长可以表示为 $\\sqrt{2}$。又因为 $\\Omega$ 的底面为正方形，所以底面边长为 $\\sqrt{2}$。因此，$\\Omega$ 的体积为：\n\n$$V = \\frac{(\\sqrt{2})^3\\sqrt{2}}{6} = \\frac{4\\sqrt{2}}{3}$$\n\n所以，正四棱锥 $\\Omega$ 的体积为 $\\frac{4\\sqrt{2}}{3}$。', 'accuracy': 99}}}
+INFO:     112.25.223.99:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     220.196.160.101:0 - "GET /solvegpt/api/v1/submitText HTTP/1.0" 405 Method Not Allowed
+INFO:     60.177.99.13:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     59.83.208.107:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     36.21.152.112:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'text': '今天天气怎么样', 'model': 'gpt-4'}
+Response: {'status_code': 200, 'body': {'success': False, 'message': 'Internal server error {\n    "error": {\n        "message": "Internal server error",\n        "type": "auth_subrequest_error",\n        "param": null,\n        "code": "internal_error"\n    }\n}\n 500 {\'error\': {\'message\': \'Internal server error\', \'type\': \'auth_subrequest_error\', \'param\': None, \'code\': \'internal_error\'}} {\'Content-Type\': \'application/json; charset=utf-8\', \'Content-Length\': \'166\', \'Connection\': \'keep-alive\', \'X-Api-RequestId\': \'fc7186f7764d36e08a98c074b2fc58d4\', \'Access-Control-Allow-Origin\': \'*\', \'Alt-Svc\': \'h3=":443"; ma=86400\', \'Cf-Cache-Status\': \'DYNAMIC\', \'Cf-Ray\': \'7dca5cf8bb1d0982-HKG\', \'Strict-Transport-Security\': \'max-age=15724800; includeSubDomains\', \'Vary\': \'Origin\', \'X-Powered-By\': \'Express\', \'X-Request-Id\': \'6d69519d20c338c316b3b811a95fec3b\'}', 'data': None}}
+INFO:     36.21.152.112:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+Params: {'text': '什么是留数定理', 'model': 'gpt-3.5-turbo'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': '什么是留数定理', 'answer': '留数定理是一种计算复变函数在某个孤立奇点处的留数的方法。它指出，如果$f(z)$是在点$z_0$的一个孤立奇点处解析的，则$f(z)$在该点的留数等于$f(z)$在该点的Laurent级数展开式中，$z^{-1}$项的系数。留数定理在复变函数的积分计算中有着广泛的应用，尤其是计算围道积分时。', 'accuracy': 95}}}
+INFO:     36.21.152.112:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     36.21.152.112:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'text': '什么是留数定理', 'model': 'gpt-3.5-turbo'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': '什么是留数定理', 'answer': '留数定理是一种计算复杂函数在某个点处的留数的方法。留数是指在某个点处的复杂函数的一个特殊的复数值，它可以用来计算函数在该点处的积分值。留数定理告诉我们，如果一个复杂函数在某个点处有一个孤立的奇点，那么它在该点处的留数就等于该函数在该点处的Laurent级数展开式中的第一项的系数。这个定理在复杂分析学中有着广泛的应用，特别是在计算复杂积分和求解微分方程等方面。', 'accuracy': 92}}}
+INFO:     36.21.152.112:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+Params: {'text': '留数定理的公式是什么', 'model': 'gpt-3.5-turbo'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': '留数定理的公式是什么', 'answer': '留数定理是一种计算围道积分的方法，它的公式如下：\n\n设函数$f(z)$在区域$D$内除了有限个孤立奇点外是全纯的，则对于$D$内的任意一个简单闭合曲线$C$，有：\n\n$$\\oint_C f(z)dz=2\\pi i\\sum_{k=1}^n Res(f,a_k)$$\n\n其中，$a_k$是$f(z)$在$D$内的孤立奇点，$Res(f,a_k)$是$f(z)$在$a_k$处的留数。', 'accuracy': 94}}}
+INFO:     36.21.152.112:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     220.196.160.151:0 - "GET /solvegpt/api/v1/submitText HTTP/1.0" 405 Method Not Allowed
+INFO:     180.101.245.248:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     202.107.195.198:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'text': 'qemu', 'model': 'gpt-4'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': 'qemu', 'answer': 'QEMU (Quick Emulator) is an open-source software that provides a generic and flexible system emulator for various hardware platforms, including x86, ARM, MIPS, and more. It allows developers and users to run operating systems and software designed for one architecture on a different architecture, making it easier to test and develop software across multiple platforms. QEMU can operate in two modes: full system emulation and user-mode emulation.\n\nIn full system emulation mode, QEMU emulates a complete hardware system, including the CPU, memory, and peripheral devices. This mode allows users to run entire operating systems on the emulator, which is useful for testing and development.\n\nIn user-mode emulation, QEMU only emulates the CPU and runs a single process on the host operating system. This mode is useful for running software compiled for a different architecture on the host system, without the need for a complete virtual machine.\n\nOverall, QEMU is a powerful tool for developers, testers, and users who need to work with multiple hardware platforms or operating systems.', 'accuracy': 92}}}
+INFO:     202.107.195.198:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+Params: {'text': '红歌会主题相关撰文', 'model': 'gpt-4'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': '红歌会主题相关撰文', 'answer': '很抱歉，作为一个AI助手，我只能回答问题和提供解释。如果您有关于红歌会主题的问题，请随时提问，我会尽力帮助您。', 'accuracy': 97}}}
+INFO:     202.107.195.198:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+Params: {'text': '红歌会主题写一篇600字文章', 'model': 'gpt-4'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': '红歌会主题写一篇600字文章', 'answer': '红歌会主题：传承红色基因，弘扬红色文化\n\n在新时代的背景下，我们更应该传承红色基因，弘扬红色文化。为了让更多的青少年了解和传承红色文化，我们组织了一场别开生面的红歌会活动。本次红歌会以“传承红色基因，弘扬红色文化”为主题，旨在通过歌声传递革命精神，唤起大家对红色文化的热爱。\n\n首先，红歌会的筹备工作得到了广大师生的热情参与。在筹备过程中，我们通过网络、微信等渠道进行宣传，吸引了众多师生报名参加。在筹备过程中，我们还特意邀请了一些曾经参加过红歌会的老师，为我们提供经验和指导，使得红歌会的筹备工作更加顺利。\n\n在红歌会现场，我们精心布置了舞台，以红色为主色调，强调红色文化的主题。活动伊始，我们请来了一位资深的老红军为大家讲述了革命历程，让在场的师生们深刻感受到了革命先烈的英勇事迹。接着，各个年级的代表们纷纷登台，用嘹亮的歌声演唱了一首首红色经典歌曲，如《歌唱祖国》、《红星照我去战斗》等，歌声中洋溢着对祖国的热爱和对先烈的敬仰。\n\n除了合唱表演，我们还邀请了一些学生进行独唱表演。他们用自己独特的嗓音，演唱了一些经典的红歌，如《我的中国心》、《红军不怕远征难》等，让在场的师生们为之动容。在红歌会的过程中，我们还穿插了一些红色故事的讲述，让大家更加深入地了解红色文化的内涵。\n\n红歌会的高潮部分是全体师生共同演唱的《没有共产党就没有新中国》。在这首歌中，大家用最激昂的歌声，表达了对党的无尽感激和崇高敬意。红歌会在这激昂的歌声中落下了帷幕。\n\n通过本次红歌会活动，我们传承了红色基因，弘扬了红色文化，让更多的青少年了解了革命历程，接受了红色教育。我们相信，在新时代的征程中，我们会更加珍惜来之不易的幸福生活，不忘初心，牢记使命，为实现中华民族伟大复兴的中国梦而努力奋斗。', 'accuracy': 96}}}
+INFO:     202.107.195.198:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     183.157.163.76:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'text': '什么是大厂', 'model': 'gpt-3.5-turbo'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': '什么是大厂', 'answer': '大厂是指在某个行业中具有很高知名度、市场份额和影响力的公司。通常这些公司拥有强大的技术实力、研发能力和生产能力，其产品或服务在市场上具有很高的竞争力和品牌价值。大厂往往也是一些知名的跨国公司或国内龙头企业。在中国，一些大型互联网公司如阿里巴巴、腾讯、百度、字节跳动等也被称为大厂。', 'accuracy': 98}}}
+INFO:     183.157.163.76:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     117.136.111.247:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     202.107.195.198:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'text': 'http://118.89.117.111/solvegpt/index.html\r\n\r\n', 'model': 'gpt-4'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': 'http://118.89.117.111/solvegpt/index.html\r\n\r\n', 'answer': "It seems like you've shared a link. Please let me know if you have any questions related to school subjects or need help with any topic. I'm here to assist you!", 'accuracy': 92}}}
+INFO:     202.107.195.198:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+Params: {'text': '500字，以初中生口吻写对社会主义核心价值观的看法\r\n', 'model': 'gpt-4'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': '500字，以初中生口吻写对社会主义核心价值观的看法\r\n', 'answer': '作为一名初中生，我对社会主义核心价值观的看法是非常积极的。社会主义核心价值观包括富强、民主、文明、和谐、自由、平等、公正、法治、爱国、敬业、诚信和友善这12个方面。这些价值观是我们国家的精神支柱，也是我们成长过程中应该积极践行的品质。\n\n首先，富强意味着我们要努力学习，为国家的繁荣做出贡献。民主让我们有了表达自己意见的权利，学会尊重他人的观点。文明让我们学会礼貌待人，做一个有教养的人。和谐让我们学会与人相处，为了共同的目标而努力。\n\n自由和平等让我们意识到每个人都有自己的权利和义务，我们应该尊重每个人的选择。公正和法治让我们明白，只有遵守规则，社会才能更加公平。爱国让我们热爱自己的国家，为祖国的繁荣付出努力。敬业让我们明白，只有专注于自己的工作，才能取得成功。\n\n诚信让我们学会遵守诺言，成为一个值得信赖的人。友善让我们学会关爱他人，传递正能量。这些价值观让我们学会如何成为一个有道德、有担当的公民。\n\n在学校，我们要努力学习，为实现自己的梦想而奋斗。在家庭，我们要孝顺父母，关心家人。在社会，我们要遵守法律，尊重他人。通过践行社会主义核心价值观，我们可以为构建和谐社会、实现中华民族伟大复兴的中国梦做出贡献。\n\n总之，作为一名初中生，我认为社会主义核心价值观是我们成长道路上的指导灯塔。我们要认真学习和践行这些价值观，为自己的人生和国家的未来贡献力量。', 'accuracy': 88}}}
+INFO:     202.107.195.198:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     202.107.195.198:0 - "POST /solvegpt/api/v1/save HTTP/1.0" 200 OK
+INFO:     202.107.195.198:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     180.101.245.249:0 - "GET /solvegpt/api/v1/save HTTP/1.0" 405 Method Not Allowed
+INFO:     223.104.77.207:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'text': '10.During the semester, the students in a math class are divided into groups of four\r\nsuch that every two groups have exactly 2 students in common and no two students are in all the groups together. Find the maximum number of such groups.', 'model': 'gpt-4'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': '10.During the semester, the students in a math class are divided into groups of four\r\nsuch that every two groups have exactly 2 students in common and no two students are in all the groups together. Find the maximum number of such groups.', 'answer': "Let's denote the number of groups as G and the number of students as S. We know that every two groups have exactly 2 students in common. So, for each group, there are G-1 other groups that share 2 students with it. This means there are 2(G-1) students shared between the groups.\n\nHowever, we're counting each pair of shared students twice (once for each group they belong to). To correct for this, we divide by 2:\n\nShared students = (2(G-1))/2 = G-1\n\nNow, let's consider the total number of students in the class. Each group has 4 students, and there are G groups. So, there are 4G students in total. But we've counted the shared students multiple times, so we need to subtract them:\n\nTotal students = 4G - Shared students = 4G - (G-1) = 3G + 1\n\nSince we're looking for the maximum number of groups, we want to find the largest value of G for which this equation holds true. To do this, we can plug in values for G and see if they satisfy the equation:\n\n1. G = 1: S = 3(1) + 1 = 4 (This is possible, but let's see if there's a larger solution)\n2. G = 2: S = 3(2) + 1 = 7 (This is also possible, but let's keep trying)\n3. G = 3: S = 3(3) + 1 = 10 (This is the largest possible solution)\n\nSo, the maximum number of such groups is 3, with 10 students in the class.", 'accuracy': 98}}}
+INFO:     223.104.77.207:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+Params: {'text': '10.During the semester, the students in a math class are divided into groups of four\r\nsuch that every two groups have exactly 2 students in common and no two students are in all the groups together. Find the maximum number of such groups.', 'model': 'gpt-4'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': '10.During the semester, the students in a math class are divided into groups of four\r\nsuch that every two groups have exactly 2 students in common and no two students are in all the groups together. Find the maximum number of such groups.', 'answer': "Let's try to understand the problem first. We have a math class with students divided into groups of 4. Every two groups have exactly 2 students in common, and no two students are in all the groups together. Our goal is to find the maximum number of such groups.\n\nWe can use graph theory to solve this problem. Let's represent each student as a vertex and each group as a complete subgraph of 4 vertices. The condition that every two groups have exactly 2 students in common can be represented as the intersection of every two complete subgraphs having exactly 2 vertices in common.\n\nNow, let's consider the number of edges in the graph. For each group, there are 6 edges (since there are 4 vertices and each vertex is connected to the other 3). Let's say we have 'g' groups. So, the total number of edges in the graph is 6g.\n\nHowever, we know that each pair of groups shares exactly 2 vertices, which means they share 1 edge. So, for every pair of groups, we have counted 1 edge twice. There are C(g,2) pairs of groups (combinations of 'g' groups taken 2 at a time). Therefore, we have over-counted C(g,2) edges.\n\nTaking this into account, the actual number of edges in the graph is:\n\n6g - C(g,2) = 6g - [g(g-1)/2]\n\nNow, let's consider the number of students (vertices) in the graph. Let's say there are 's' students. Each student belongs to at least one group, so the maximum degree of a vertex is g. According to the Handshaking Lemma, the sum of the degrees of all vertices is equal to twice the number of edges:\n\n∑(degree of vertex) = 2 * number of edges\n\nSince the maximum degree of a vertex is g, we have:\n\ns * g <= 2 * [6g - g(g-1)/2]\n\nExpanding and simplifying, we get:\n\ns * g <= 12g - g^2 + g\n\ns <= 12 - g\n\nNow, we want to maximize the number of groups (g), so we need to minimize the number of students (s). The minimum value of 's' is the number of students in one group, which is 4. So, we have:\n\n4 <= 12 - g\n\ng >= 8\n\nTherefore, the maximum number of such groups is 8.", 'accuracy': 94}}}
+INFO:     223.104.77.207:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     223.104.77.207:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'image': <starlette.datastructures.UploadFile object at 0x7f420137fa30>}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Text detected.', 'data': {'question': '十 北京初高中数学> [题目] 已知在△ABC中，∠B=∠C=a，点D为BC的中点，E为BD上一点， 点F为EC中点，点G在BC上方,DF=FG,∠DFG=2a,连接EG,AG, 求证:AGIEG. A 公众号:北京初高中数学 G B E D F C', 'answer': None, 'accuracy': None}}}
+INFO:     223.104.77.207:0 - "POST /solvegpt/api/v1/submitImage HTTP/1.0" 200 OK
+Params: {'text': '十 北京初高中数学> [题目] 已知在△ABC中，∠B=∠C=a，点D为BC的中点，E为BD上一点， 点F为EC中点，点G在BC上方,DF=FG,∠DFG=2a,连接EG,AG, 求证:AGIEG. A 公众号:北京初高中数学 G B E D F C', 'model': 'gpt-3.5-turbo'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': '十 北京初高中数学> [题目] 已知在△ABC中，∠B=∠C=a，点D为BC的中点，E为BD上一点， 点F为EC中点，点G在BC上方,DF=FG,∠DFG=2a,连接EG,AG, 求证:AGIEG. A 公众号:北京初高中数学 G B E D F C', 'answer': '根据题目中的条件，可以得到以下几个结论：\n\n1. 因为D为BC的中点，所以BD=DC，又因为∠B=∠C=a，所以△BDE和△CDE是等腰三角形，即BD=DE=EC。\n\n2. 因为F为EC中点，所以EF=FC，又因为BD=DC，所以△BDE和△FEC是全等三角形。\n\n3. 因为DF=FG，所以△DFG是等腰三角形，又因为∠DFG=2a，所以∠DGF=180°-4a，所以∠EGF=2a。\n\n根据以上结论，可以得到以下证明：\n\n1. 因为BD=DE=EC，所以△BDE和△FEC是全等三角形，所以∠BDE=∠FEC=a。\n\n2. 因为DF=FG，所以△DFG是等腰三角形，所以∠DGF=180°-2∠DFG=180°-4a。\n\n3. 因为∠EGF=2a，所以∠EFG=∠EGF=2a。\n\n4. 因为∠BDE=∠FEC=a，所以∠BED=∠FCE=180°-2a。\n\n5. 因为∠DGF=180°-4a，所以∠DGE=∠DGF/2=90°-2a。\n\n6. 因为BD=DC，所以∠DBC=∠DCB=a。\n\n7. 因为∠EFG=2a，所以∠EGF=∠EFG=a。\n\n8. 因为∠DGE=90°-2a，所以∠AGE=∠DGE-∠DBC=90°-2a-a=90°-3a。\n\n9. 因为∠EGF=∠EFG=a，所以∠AEG=180°-∠AGE-∠EGF=180°-(90°-3a)-a=90°+2a。\n\n10. 因为BD=DC，所以△BDC是等腰三角形，所以∠DBC=∠DCB=a。\n\n11. 因为∠BED=∠FCE=180°-2a，所以∠BEC=∠BED/2=90°-a。\n\n12. 因为BD=DE=EC，所以△BDE和△DEC是等边三角形，所以∠BDE=∠DEC=60°。\n\n13. 因为∠BEC=90°-a，所以∠CEG=∠BEC-∠BED/2=(90°-a)-(180°-2a)/2=45°-a/2。\n\n14. 因为∠CEG=45°-a/2，所以∠AEG=180°-∠CEG-∠EGF=180°-(45°-a/2)-a=135°-3a/2。\n\n15. 因为∠AGE=90°+2a，所以∠AEG+∠AGE=225°-a/2=180°+45°-a/2。\n\n因此，根据三角形内角和定理，可以得出△AGE的另外两个角∠GAE和∠GEA分别为45°和90°，所以△AGE是等腰直角三角形，即AG=EG，又因为AE=AE，所以△AGE和△AIE是全等三角形，即AG=EI，所以AGIEG。', 'accuracy': 82}}}
+INFO:     223.104.77.207:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     129.211.163.253:0 - "GET /solvegpt/api/v1/submitImage HTTP/1.0" 405 Method Not Allowed
+INFO:     36.113.196.7:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     122.231.255.106:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     122.231.255.106:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'image': <starlette.datastructures.UploadFile object at 0x7f420137d0f0>}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Text detected.', 'data': {'question': '=-, 2x 0<x≤1 dx y ’ y(0)=1', 'answer': None, 'accuracy': None}}}
+INFO:     122.231.255.106:0 - "POST /solvegpt/api/v1/submitImage HTTP/1.0" 200 OK
+Params: {'image': <starlette.datastructures.UploadFile object at 0x7f420137ffd0>}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Text detected.', 'data': {'question': '=-, 2x 0<x≤1 dx y ’ y(0)=1', 'answer': None, 'accuracy': None}}}
+INFO:     122.231.255.106:0 - "POST /solvegpt/api/v1/submitImage HTTP/1.0" 200 OK
+Params: {'text': 'dy/dx=y-2x/y y(0)=1', 'model': 'gpt-3.5-turbo'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': 'dy/dx=y-2x/y y(0)=1', 'answer': 'This is a first-order nonlinear differential equation. To solve it, we can use the technique of separation of variables.\n\nFirst, we can write the equation as:\n\ny dy/dx = y - 2x\n\nNext, we can separate the variables by dividing both sides by (y - 2x):\n\n(y dy/dx)/(y - 2x) = 1\n\nNow, we can integrate both sides with respect to x and y, respectively:\n\n∫(y dy)/(y - 2x) = ∫dx\n\nTo integrate the left-hand side, we can use the substitution u = y - 2x, which gives us du/dx = dy/dx - 2. Substituting this into the integral, we get:\n\n∫(y dy)/(y - 2x) = ∫(du/(2-u))\n\nThis can be integrated using partial fractions or by using the substitution v = 2 - u, which gives us:\n\n∫(du/(2-u)) = -ln|2-u| + C1\n\nwhere C1 is the constant of integration.\n\nIntegrating the right-hand side is straightforward:\n\n∫dx = x + C2\n\nwhere C2 is another constant of integration.\n\nPutting it all together, we get:\n\n-ln|2-y+2x| = x + C\n\nwhere C = C2 - C1 is the constant of integration.\n\nSolving for y, we get:\n\ny = 2x - Ce^(-x)\n\nUsing the initial condition y(0) = 1, we can find the value of C:\n\n1 = 2(0) - Ce^(0)\nC = -1\n\nTherefore, the solution to the differential equation is:\n\ny = 2x + e^(-x)', 'accuracy': 90}}}
+INFO:     122.231.255.106:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+Params: {'text': 'dy/dx=y-2x/y y(0)=1', 'model': 'gpt-4'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': 'dy/dx=y-2x/y y(0)=1', 'answer': "This is a first-order differential equation, and you are given an initial condition y(0) = 1. To solve this type of differential equation, you would typically use a method such as separation of variables or integrating factors. However, the equation you've given is not written in a form that readily allows for these methods. \n\nThe equation you've given is dy/dx = (y-2x)/y. In order to use separation of variables, you would need to be able to write it in the form dy/dx = f(y)g(x), where f(y) is a function of y alone and g(x) is a function of x alone.\n\nIn this case, the equation can be rewritten as dy/dx = 1 - (2x/y), which is still not in the correct form for separation of variables, because the right-hand side is not a product of a function of y and a function of x.\n\nIf there's a mistake in the equation you've provided, or if there's more context to the problem that you haven't provided, I'd be happy to help further if I can!", 'accuracy': 90}}}
+INFO:     122.231.255.106:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+Params: {'text': 'dy/dx=y-2x/y y(0)=1', 'model': 'gpt-4-0613'}
+Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': 'dy/dx=y-2x/y y(0)=1', 'answer': 'This is a first-order linear differential equation. To solve it, we need to apply the method of integrating factors.\n\nFirst, rewrite the equation in standard form: dy/dx - (1/y)y = 2x\n\nThe integrating factor is e^(∫-1/y dy) = e^(-ln|y|) = 1/y\n\nMultiply the entire equation by the integrating factor (1/y):\n\n(1/y)dy/dx - 1 = 2x/y\n\nThis simplifies to: d/dx(y^-1 * y) = 2x/y\n\nIntegrate both sides with respect to x: \n\n∫d/dx(y^-1 * y) dx = ∫2x/y dx\n\nThis simplifies to: y^-1 * y = x^2/y + C\n\nMultiply through by y to solve for y in terms of x:\n\ny = x^2 + C*y^2\n\nThis is the general solution to the differential equation. To find the particular solution that satisfies y(0)=1, substitute x=0 and y=1 into the equation:\n\n1 = 0 + C\n\nTherefore, C=1. The particular solution is:\n\ny = x^2 + y^2', 'accuracy': 95}}}
+INFO:     122.231.255.106:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     220.196.160.124:0 - "GET /solvegpt/api/v1/submitImage HTTP/1.0" 405 Method Not Allowed
+INFO:     220.196.160.154:0 - "GET /solvegpt/api/v1/submitText HTTP/1.0" 405 Method Not Allowed
+INFO:     59.83.208.105:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     104.249.174.124:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'text': '请介绍一下你自己', 'model': 'gpt-4-0613'}
+Response: {'status_code': 200, 'body': {'success': False, 'message': 'You exceeded your current quota, please check your plan and billing details.', 'data': None}}
+INFO:     104.249.174.124:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+Params: {'text': '请介绍一下你自己', 'model': 'gpt-3.5-turbo'}
+Response: {'status_code': 200, 'body': {'success': False, 'message': 'You exceeded your current quota, please check your plan and billing details.', 'data': None}}
+INFO:     104.249.174.124:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     220.196.160.144:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     180.101.245.246:0 - "GET /solvegpt/api/v1/submitText HTTP/1.0" 405 Method Not Allowed
+INFO:     27.115.124.118:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     101.95.188.58:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     101.95.188.58:0 - "GET /solvegpt/api/v1/download HTTP/1.0" 200 OK
+INFO:     101.95.188.58:0 - "POST /solvegpt/api/v1/upload HTTP/1.0" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 435, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/root/miniconda3/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/root/miniconda3/lib/python3.10/site-packages/fastapi/applications.py", line 276, in __call__
+    await super().__call__(scope, receive, send)
+  File "/root/miniconda3/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/root/miniconda3/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/root/miniconda3/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/root/miniconda3/lib/python3.10/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/root/miniconda3/lib/python3.10/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "/root/miniconda3/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/root/miniconda3/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/root/miniconda3/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/root/miniconda3/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/root/miniconda3/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/root/miniconda3/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/root/miniconda3/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/root/miniconda3/lib/python3.10/site-packages/fastapi/routing.py", line 237, in app
+    raw_response = await run_endpoint_function(
+  File "/root/miniconda3/lib/python3.10/site-packages/fastapi/routing.py", line 163, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/root/solvegpt/main.py", line 269, in upload
+    content = io.StringIO(file_content.decode())
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+INFO:     101.95.188.58:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     59.83.208.103:0 - "GET /solvegpt/api/v1/download HTTP/1.0" 200 OK
+INFO:     59.83.208.107:0 - "GET /solvegpt/api/v1/upload HTTP/1.0" 405 Method Not Allowed
+INFO:     114.55.246.194:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     180.101.244.13:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     183.157.161.243:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'text': '一加一等于几\r\n', 'model': 'gpt-3.5-turbo'}
+Response: {'status_code': 200, 'body': {'success': False, 'message': 'You must be a member of an organization to use the API. Please contact us through our help center at help.openai.com.', 'data': None}}
+INFO:     183.157.161.243:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     180.101.245.248:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+INFO:     180.101.245.253:0 - "GET /solvegpt/api/v1/submitText HTTP/1.0" 405 Method Not Allowed
+INFO:     220.184.252.147:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'text': '一加一等于几', 'model': 'gpt-3.5-turbo'}
+Response: {'status_code': 200, 'body': {'success': False, 'message': 'You must be a member of an organization to use the API. Please contact us through our help center at help.openai.com.', 'data': None}}
+INFO:     220.184.252.147:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     220.184.252.147:0 - "GET /solvegpt/api/v1/getAll HTTP/1.0" 200 OK
+Params: {'text': '一加一等于几', 'model': 'gpt-3.5-turbo'}
+Response: {'status_code': 200, 'body': {'success': False, 'message': 'You must be a member of an organization to use the API. Please contact us through our help center at help.openai.com.', 'data': None}}
+INFO:     220.184.252.147:0 - "POST /solvegpt/api/v1/submitText HTTP/1.0" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1009634]
