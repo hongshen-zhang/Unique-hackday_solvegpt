@@ -29,27 +29,27 @@
 
 # 软件部署
 
-1. 网页端: 开发了 [solvegpt](http://118.89.117.111/solvegpt/index.html)
+## 1. 网页端: 开发了 [solvegpt](http://118.89.117.111/solvegpt/index.html)
 ![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/000343c5-5662-4b8a-adb0-3fd8c98fde7f)
 
-2. 安卓端: 开发了 Android端App-Solvegpt(Release now,v1.0.0)
+## 2. 安卓端: 开发了 Android端App-Solvegpt(Release now,v1.0.0)
 ![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/93a552f2-0f0d-4d4b-922e-0f38c291bb19)
 
 
 ---
 
 # 代码运行说明
-请补充OCR Key和OPENAI Key
+## 请补充OCR Key和OPENAI Key
 
 ```
-:: 1. ocr secret key
+1. ocr secret key
 ./solvegpt/main.py line 95:
 def tencent_ocr(img_base64):
     cred = credential.Credential(
         "", ""
     )
  
-:: 2. openai secret key
+2. openai secret key
 ./solvegpt/openai_config.json line 2:
 {
     "api_key": "",
