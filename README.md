@@ -50,6 +50,13 @@
 4. 题库学习
 ![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/5435abf1-5a8f-4285-b4e4-e894bc64de28)
 
+# 竞品对比
+1. ![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/2d5a7d85-754c-4e55-a99b-d6943679fc0f)
+2. ![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/68d1a4ba-1134-4d50-9a6a-a30f58439b3d)
+
+# AI大模型相关
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/763ffa24-f66e-4df1-bf16-209bc454ae1b)
+
 ---
 
 # 代码运行说明
