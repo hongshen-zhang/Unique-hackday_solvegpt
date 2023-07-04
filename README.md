@@ -3,11 +3,15 @@
 # 背景介绍
 目前，一种主流的观点是:chatgpt能帮我们解决作业问题(90%的国外学生都用chatgpt写作业)。
 而实际上，目前chatgpt(尤其是理科问题)并不accessible。
-一个做题的流程是，1.打开vpn。2.登陆openai。3.将文字和公式输入对话框。4.得到一个不太准确的结果。
+一个做题的流程是，
+1.打开vpn。
+2.登陆openai。
+3.将文字和公式输入对话框。
+4.得到一个不太准确的结果。(或者说是无法评估的答案)
 
 ## 整个过程存在许多障碍
 1. 网络限制: 需要连接外网。
-2. 账号限制: 需要注册海外账号。
+2. 账号限制: 需要注册海外Chatgpt账号。
 3. 输入复杂: 手动将文字和公式输入chatgpt。
 4. 结果不准：chatgpt目前在解决理科题目时，准确率低。(高考理科填空题和大题准确率不足20%)
 
@@ -18,6 +22,13 @@
 3. 输入简单: 支持识别图片题目公式与文字。
 4. 结果判断：基于多模型(gpt3.5,4)联合讨论，我们能够更准确的求解(相比于直接求解)。对于实在无法解决的问题，我们输出了准确率的概率，给学生提供参考。
 
+# 软件部署
+## 1. 网页端: 开发了 [solvegpt](http://118.89.117.111/solvegpt/index.html)
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/000343c5-5662-4b8a-adb0-3fd8c98fde7f)
+
+## 2. 安卓端: 开发了 Android端App-Solvegpt(Release now,v1.0.0)
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/93a552f2-0f0d-4d4b-922e-0f38c291bb19)
+
 # 产品灵感
 ![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/2ab8be8e-561a-4237-9eb9-55fd11b4e322)
 
@@ -27,14 +38,16 @@
 3. 准确率智能判断(Accuracy Analysis)，用于评估解题答案的准确性(Accuracy 0% - 100%)
 4. 跨平台部署(Cross-platform)，支持Windows，Mac以及Android设备
 5. 题库学习(Bank Learning),直接输入题目或者公式进行学习
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/e6dc0c5d-c0ca-4207-a1c0-aeb109b9e91f)
 
-# 软件部署
+# 产品亮点
+1. 多模态输入
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/4ae3cff4-272d-4bcc-b6a9-98a667d89ec1)
 
-## 1. 网页端: 开发了 [solvegpt](http://118.89.117.111/solvegpt/index.html)
-![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/000343c5-5662-4b8a-adb0-3fd8c98fde7f)
+2. 
+3. 
 
-## 2. 安卓端: 开发了 Android端App-Solvegpt(Release now,v1.0.0)
-![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/93a552f2-0f0d-4d4b-922e-0f38c291bb19)
+
 
 
 ---
