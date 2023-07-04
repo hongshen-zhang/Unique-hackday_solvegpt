@@ -1,3 +1,4 @@
+
 # Unique Hackday 2023: AIGC + Accessible
 
 # 背景介绍
@@ -18,7 +19,7 @@
 ## 因此,我们开发了[solvegpt](http://118.89.117.111/solvegpt/index.html)，一款AI实时集智拍照解题工具
 
 1. 无网络限制: 部署在腾讯云(使用香港节点中转)。
-2. 无账号限制: 我们目前免费开放使用(我垫钱)。
+2. 无账号限制: 我们目前免费开放使用(我垫钱，7月4日又买了200刀的额度)。
 3. 输入简单: 支持识别图片题目公式与文字。
 4. 结果判断：基于多模型(gpt3.5,4)联合讨论，我们能够更准确的求解(相比于直接求解)。对于实在无法解决的问题，我们输出了准确率的概率，给学生提供参考。
 
@@ -36,19 +37,18 @@
 1. 多模态输入(Multimodal Input)，用于识别图片题目公式与文字(基于腾讯云OCR)
 2. 多模型联合对抗求解(Adversarial Learning)，用于提高求解准确率(gpt-3.5-turbo,gpt-4,gpt-4-0613)
 3. 准确率智能判断(Accuracy Analysis)，用于评估解题答案的准确性(Accuracy 0% - 100%)
-4. 跨平台部署(Cross-platform)，支持Windows，Mac以及Android设备
-5. 题库学习(Bank Learning),直接输入题目或者公式进行学习
-![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/e6dc0c5d-c0ca-4207-a1c0-aeb109b9e91f)
+4. 题库学习(Bank Learning),直接输入题目或者公式进行学习
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/5624a10a-fc55-4ae8-ae6b-90fc1d69a6f9)
 
 # 产品亮点
 1. 多模态输入
 ![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/4ae3cff4-272d-4bcc-b6a9-98a667d89ec1)
-
-2. 
-3. 
-
-
-
+2. 多模型联合
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/7aff38a8-95d8-42ef-8a6d-453d101fb1c0)
+3.准确率分析
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/7777975e-be56-4f78-a2f6-7607d85b3f57)
+4. 题库学习
+![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/5435abf1-5a8f-4285-b4e4-e894bc64de28)
 
 ---
 
