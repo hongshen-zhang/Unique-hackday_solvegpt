@@ -1,5 +1,5 @@
-# Unique Hackday 2023: AIGC + Accessible
-喵喵汪汪——队长: 李昕瑾 队员: 张洪申
+# Hackthon
+喵喵汪汪
 
 # 背景介绍
 目前，一种主流的观点是:chatgpt能帮我们解决作业问题(90%的国外学生都用chatgpt写作业)。
