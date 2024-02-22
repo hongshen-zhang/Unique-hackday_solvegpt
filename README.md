@@ -58,10 +58,6 @@
 
 # 代码运行说明
 ## 请补充OCR Key和OPENAI Key
-```
-a=a+1
-```
-
 
 ```
 1. ocr secret key
